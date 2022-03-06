@@ -13,7 +13,41 @@ body {
 }
 
 .container {
-    max-width: 960px;
-    margin: 100px auto;
-    padding: 10px;
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+
+  display: grid;
+  /* 3 kolon olacak, ilki 100px, ikincisi 200px ve üçüncüsü 300px olacak, veya başka belirteçler... */
+  /* grid-template-columns: 100px 200px 300px; */
+  /* grid-template-columns: 30% 40% 30%; */
+  /* grid-template-columns: 1fr 1fr 2fr; */
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* 3 kez 1fr tekrarla. yani birbirine eşit 3 kolon üreterek ilerle. */
+
+  /* column-gap: 10px;  kolonlar arası boşluk 
+  row-gap: 10px;  satırlar arası boşluk */
+  gap: 10px; /* veya böyle yap... */
+
+  /* grid-auto-rows: 150px; bütün grid elementleri 150px olacak. */
+  /* grid-auto-rows: minmax(100px, auto);  grid elementleri en az 100px, en fazla gittiği yere kadar uzayacak. */
+
+  /* grid-template-rows: 300px 100px 300px;  sırasıyla ilk satır grid elementleri 300px yüksekliğinde,
+  ikinci satır 100px yüksekliğinde ve üçüncü satır tekrar 300px yüksekliğinde olacak şekilde bir düzen izlenir.
+  */
+
+  /* align-items: center;  bir item büyüdüğünde diğerleri büyümesin de üste, ortaya ya da alta sabitlensin... */
+  /* justify-content: center; kolon ve genişliği sınırlarsak eğer, toplam genişliğe grid container nasıl
+  sığacak? başına mı, ortasına  mı?
+  */
+}
+
+.item {
+  background-color: steelblue;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  border: skyblue 1px solid;
 }
