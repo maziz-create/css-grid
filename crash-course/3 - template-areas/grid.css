@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  display: grid;
+  grid-template-areas: "header header header" "navigation content sidebar" "navigation footer footer";
+
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 80px 1fr 70px;
+}
+
+.item {
+  background-color: steelblue;
+  color: #fff;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: navigation;
+}
+
+main {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* Alttaki kodlar benim çözümümdü. Hatalı... 
+
+.container {
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.item {
+  padding: 30px;
+  border: 1px solid black;
+}
+
+.item:nth-of-type(2n-1) {
+  background-color: rgb(231, 80, 80);
+}
+
+.item:nth-of-type(2n) {
+  background-color: rgb(72, 72, 236);
+}
+
+.header {
+  grid-column: 1 / 7;
+}
+
+.navigation {
+  grid-row: 2 / 7;
+}
+
+.content {
+  grid-row: 2 / 6;
+  grid-column: 2 / 6;
+}
+
+.footer {
+    grid-column: 2 / 6;
+}
+
+.sidebar {
+    grid-row: 2 / 7;
+}
+
+*/
